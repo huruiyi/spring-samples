@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>用户注册</title>
+<style type="text/css">
+table {
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+	<h3 style="text-align: center;">注册页面</h3>
+	<form action="/JavaWeb/request5" method="post">
+		<table>
+			<tr>
+				<td>用户名:</td>
+				<td>
+					<input type="text" name="username">
+				</td>
+			</tr>
+			<tr>
+				<td>密码:</td>
+				<td>
+					<input type="password" name="password">
+				</td>
+			</tr>
+			<tr>
+				<td>确认密码:</td>
+				<td>
+					<input type="password" name="repassword">
+				</td>
+			</tr>
+			<tr>
+				<td>性别:</td>
+				<td>
+					<input id="rdMale" type="radio" name="gender" value="male">
+					<label for="rdMale">男</label>
+					<input id="rdFemale" type="radio" name="gender" value="female">
+					<label for="rdFemale">女</label>
+				</td>
+			</tr>
+			<tr>
+				<td>出生年月:</td>
+				<td>
+					<input type="text" name="birthday">
+				</td>
+			</tr>
+			<tr>
+				<td>爱好:</td>
+				<td>
+					<input id="ch01" type="checkbox" name="hobbies" value="弹棉花">
+					<label for="ch01">弹棉花</label>
+					<input id="ch02" type="checkbox" name="hobbies" value="玩毛线">
+					<label for="ch02">玩毛线</label>
+					<input id="ch03" type="checkbox" name="hobbies" value="淘宝">
+					<label for="ch03">淘宝</label>
+					<input id="ch04" type="checkbox" name="hobbies" value="敲代码">
+					<label for="ch04">敲代码</label>
+				</td>
+			</tr>
+			<tr>
+				<td>城市:</td>
+				<td>
+					<select name="city">
+						<option value="深圳">深圳</option>
+						<option value="香港">香港</option>
+						<option value="广州">广州</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>交友宣言:</td>
+				<td>
+					<textarea rows="5" cols="75" name="introduction"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="注册">
+				</td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>
