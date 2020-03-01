@@ -19,8 +19,6 @@ public class ResponseDemo1 extends HttpServlet {
 	private static final long serialVersionUID = 8708342750960632992L;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// response.setStatus(404);
-		// 通过 setStatus 设置响应的状态码
 		response.setStatus(500);
 	}
 

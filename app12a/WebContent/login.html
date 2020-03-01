@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Login</title>
+<style type="text/css">
+body {
+	width: 99%;
+}
+
+table {
+	margin: 260px auto;
+}
+
+table tr td {
+	border-collapse: collapse;
+	border: 1px blue solid;
+	padding: 10px;
+}
+
+td:first-child {
+	text-align: right;
+	width: 100px;
+}
+
+td {
+	width: 200px;
+}
+</style>
+
+</head>
+<body>
+ <form action='j_security_check' method='post'>
+  <table>
+   <caption>Login Form</caption>
+   <tr>
+    <td>User Name:</td>
+    <td>
+     <input name='j_username' />
+    </td>
+   </tr>
+
+   <tr>
+    <td>Password:</td>
+    <td>
+     <input type='password' name='j_password' />
+    </td>
+   </tr>
+   <tr>
+    <td colspan="2">
+     <input type='submit' value='Login' />
+    </td>
+   </tr>
+  </table>
+ </form>
+</body>
+</html>

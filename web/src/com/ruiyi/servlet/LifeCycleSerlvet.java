@@ -22,21 +22,21 @@ public class LifeCycleSerlvet implements Servlet {
 		System.out.println("LifeCycleSerlvet  创建了  ....");
 	}
 
-	// 当serlvet创建的时候会执行
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		System.out.println("init ...");
 	}
 
-	// 当serlvet 服务 客户端的请求的时候会执行
+	/*
+	 * request.getRequestDispatcher("").include(request, response);
+	 * request.getRequestDispatcher("").forward(request, response);
+	 */
+
 	@Override
-	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
 		int i = 1;
 		System.out.println("service ...");
-		/*
-		 * req.getRequestDispatcher("").include(req, res);
-		 * req.getRequestDispatcher("").forward(req, res);
-		 */
+
 		i++;
 		System.out.println(i);
 
@@ -44,7 +44,6 @@ public class LifeCycleSerlvet implements Servlet {
 		System.out.println(yy);
 	}
 
-	// 当serlvet 服务销毁请求的时候会执行
 	@Override
 	public void destroy() {
 		System.out.println("destroy ...");

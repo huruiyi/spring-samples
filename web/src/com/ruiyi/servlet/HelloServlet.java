@@ -15,9 +15,9 @@ import javax.servlet.http.HttpServletResponse;
  *  编写 快速入门的serlvet 程序 
  *  	所以 , 结论是 , 以后写servlet时,  只需要去覆盖 doGet,doPost方法, 而不要去覆盖  service方法 .... 
  */
-@WebServlet(urlPatterns = "/shello", initParams = { 
-		@WebInitParam(name = "name1", value = "name1_value"),
-		@WebInitParam(name = "name2", value = "name2_value") })
+@WebServlet(urlPatterns = "/shello", 
+			initParams = { @WebInitParam(name = "name1", value = "name1_value"),
+@WebInitParam(name = "name2", value = "name2_value") })
 public class HelloServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 3461742286264598454L;

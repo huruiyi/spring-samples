@@ -82,20 +82,15 @@ public class ItemsController {
 	// throws Exception{
 	public String update(MultipartFile pictureFile, Items items, Model model, HttpServletRequest request)
 			throws Exception {
-		// 1. 获取图片完整名称
-		String fileStr = pictureFile.getOriginalFilename();
-		// 2. 使用随机生成的字符串+源图片扩展名组成新的图片名称,防止图片重名
-		String newfileName = UUID.randomUUID().toString() + fileStr.substring(fileStr.lastIndexOf("."));
-		// 3. 将图片保存到硬盘
-		pictureFile.transferTo(new File("E:\\image\\" + newfileName));
-		// 4.将图片名称保存到数据库
-		items.setPic(newfileName);
+ 		String fileStr = pictureFile.getOriginalFilename();
+ 		String newfileName = UUID.randomUUID().toString() + fileStr.substring(fileStr.lastIndexOf("."));
+ 		pictureFile.transferTo(new File("E:\\image\\" + newfileName));
+ 		items.setPic(newfileName);
 		itmesService.updateItems(items);
-		// 返回数据
+	 
 		// request.setAttribute("", arg1);
 		// 指定返回的页面(如果controller方法返回值为void,则不走springMvc组件,所以要写页面的完整路径名称)
-		// request.getRequestDispatcher("/WEB-INF/jsp/success.jsp").forward(request,
-		// response);
+		// request.getRequestDispatcher("/WEB-INF/jsp/success.jsp").forward(request, response);
 
 		// 重定向:浏览器中url发生改变,request域中的数据不可以带到重定向后的方法中
 		// model.addAttribute("id", items.getId());
