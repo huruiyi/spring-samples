@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.catalina.startup.VersionLoggerListener;
+
 @WebServlet(asyncSupported = true, urlPatterns = "/hello")
 public class HelloServlet extends HttpServlet {
 
@@ -32,8 +34,8 @@ public class HelloServlet extends HttpServlet {
 		writer.println("</body>");
 		writer.println("</html>");
 		writer.append("Served at: ").append(request.getContextPath());
-		// writer.close();
-	}
+		writer.close();
+  	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

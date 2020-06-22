@@ -9,13 +9,13 @@ import org.mybatis.generator.config.Configuration;
 import org.mybatis.generator.config.xml.ConfigurationParser;
 import org.mybatis.generator.internal.DefaultShellCallback;
 
-public class App {
+public class MybatisGenerator {
 
 	public static void main(String[] args) throws Exception {
 		try {
 			List<String> warnings = new ArrayList<String>();
 			boolean overwrite = true;
-			File configFile = new File("src/generatorConfig.xml");
+			File configFile = new File("resource/generatorConfig.xml");
 			ConfigurationParser cp = new ConfigurationParser(warnings);
 			Configuration config = cp.parseConfiguration(configFile);
 			DefaultShellCallback callback = new DefaultShellCallback(overwrite);
