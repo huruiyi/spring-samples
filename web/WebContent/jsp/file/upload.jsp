@@ -8,8 +8,7 @@
 </style>
 <%
 	String path = request.getContextPath();
-	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
-			+ path + "/";
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 
 <base href="<%=basePath%>">
@@ -95,19 +94,19 @@ input[type=submit]:active {
 </script>
 </head>
 <body>
-	<fieldset style="color: blue; border: 1px solid blue;">
-		<legend style="color: blue">文件上传实验</legend>
-		<form action="<%=basePath%>upload" method="post" enctype="multipart/form-data">
-			<span class="ryupload" id="ry1">
-				<label>upload</label>
-				<input name="f1" type="file" title="请选择要上传的文件">
-			</span>
-			<span class="ryupload" id="ry1">
-				<label>upload</label>
-				<input name="f2" type="file" title="请选择要上传的文件">
-			</span>
-			<input type="submit" style="" value="上传">
-		</form>
-	</fieldset>
+ <fieldset style="color: blue; border: 1px solid blue;">
+  <legend style="color: blue">文件上传实验</legend>
+  <form action="<%=basePath%>upload" method="post" enctype="multipart/form-data">
+   <span class="ryupload" id="ry1">
+    <label>upload</label>
+    <input name="f1" type="file" title="请选择要上传的文件">
+   </span>
+   <span class="ryupload" id="ry1">
+    <label>upload</label>
+    <input name="f2" type="file" title="请选择要上传的文件">
+   </span>
+   <input type="submit" style="" value="上传">
+  </form>
+ </fieldset>
 </body>
 </html>

@@ -20,7 +20,8 @@ public class FinalReferenceExample {
 
     public static void reader() { //读线程C执行
         if (obj != null) { //5
-            int temp1 = obj.intArray[0]; //6
+			int temp = obj.intArray[0]; //6
+			System.out.println(temp);
         }
     }
 }

@@ -12,7 +12,8 @@ public class ConcurrentTask {
 
 	private final ConcurrentMap<Object, Future<String>> taskCache = new ConcurrentHashMap<Object, Future<String>>();
 
-	private String executionTask(final String taskName) throws InterruptedException, ExecutionException  {
+	@SuppressWarnings("unused")
+	private String executionTask(final String taskName) throws InterruptedException, ExecutionException {
 		while (true) {
 			Future<String> future = taskCache.get(taskName); // 1.1,2.1
 			if (future == null) {

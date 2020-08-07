@@ -7,6 +7,7 @@ import java.util.concurrent.RecursiveTask;
 
 public class CountTask extends RecursiveTask<Integer> {
 
+	private static final long serialVersionUID = 1L;
 	private static final int THRESHOLD = 2; // 阈值
 	private int start;
 	private int end;

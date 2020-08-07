@@ -21,6 +21,7 @@ public class ReentrantLockExample {
         try {
             int i = a;
             //……
+            System.out.println(i);
         } finally {
             lock.unlock(); //释放锁
         }

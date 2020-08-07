@@ -7,12 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-		DateFormat df = DateFormat.getInstance();
-		Date today = new Date();
-	%>
-	<h2>
-		Today's Date is
-		<%=df.format(today)%></h2>
+ <%
+ 	DateFormat df = DateFormat.getInstance();
+    Date today = new Date();
+ %>
+ <h2>
+  Today's Date is
+  <%=df.format(today)%></h2>
 </body>
 </html>

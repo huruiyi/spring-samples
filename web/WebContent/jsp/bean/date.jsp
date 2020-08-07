@@ -6,9 +6,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:useBean id="date" class="com.ruiyi.web.DateFormatBean"></jsp:useBean>
-	<h2>
-		Today's Date is	<%=date.getDate()%>
-	</h2>
+ <jsp:useBean id="date" class="com.ruiyi.web.DateFormatBean"></jsp:useBean>
+ <h2>
+  Today's Date is
+  <%=date.getDate()%>
+ </h2>
 </body>
 </html>

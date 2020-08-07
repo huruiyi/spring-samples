@@ -6,12 +6,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:useBean id="date" class="com.ruiyi.web.DateFormatBean">
-		<jsp:setProperty name="date" property="format" value="EEE, d MMM yyyy HH:mm:ss z" />
-	</jsp:useBean>
+ <jsp:useBean id="date" class="com.ruiyi.web.DateFormatBean">
+  <jsp:setProperty name="date" property="format" value="EEE, d MMM yyyy HH:mm:ss z" />
+ </jsp:useBean>
 
-	<h2>
-		Today's Date is
-		<jsp:getProperty name="date" property="date" /></h2>
+ <h2>
+  Today's Date is
+  <jsp:getProperty name="date" property="date" /></h2>
 </body>
 </html>

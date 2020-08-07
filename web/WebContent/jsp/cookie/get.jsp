@@ -8,21 +8,21 @@
 </head>
 <body class="row justify-content-center">
 
-	<%
-		Cookie[] cookies = request.getCookies();
-		response.getWriter().write("<table>");
-		for (int i = 0; i < cookies.length; i++) {
-			response.getWriter().write("<tr>");
-			response.getWriter().write("<td>");
-			response.getWriter().println(cookies[i].getName());
-			response.getWriter().write("</td>");
+ <%
+ 	Cookie[] cookies = request.getCookies();
+ 	response.getWriter().write("<table>");
+ 	for (int i = 0; i < cookies.length; i++) {
+ 		response.getWriter().write("<tr>");
+ 		response.getWriter().write("<td>");
+ 		response.getWriter().println(cookies[i].getName());
+ 		response.getWriter().write("</td>");
 
-			response.getWriter().write("<td>");
-			response.getWriter().println(cookies[i].getValue());
-			response.getWriter().write("</td>");
-			response.getWriter().write("</tr>");
-		}
-		response.getWriter().write("</table>");
-	%>
+ 		response.getWriter().write("<td>");
+ 		response.getWriter().println(cookies[i].getValue());
+ 		response.getWriter().write("</td>");
+ 		response.getWriter().write("</tr>");
+ 	}
+ 	response.getWriter().write("</table>");
+ %>
 </body>
 </html>

@@ -4,8 +4,7 @@
 <head>
 <%
 	String path = request.getContextPath();
-	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
-			+ path + "/";
+String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 
 <!-- 表示页面 5 秒钟后跳转到网站的首页 -->
@@ -33,9 +32,9 @@
 </head>
 
 <body onload="init();">
-	<%=basePath%>
-	哥们,
-	<span id="timer"></span>
-	秒后会跳转到Tomcat服务器首页
+ <%=basePath%>
+ 哥们,
+ <span id="timer"></span>
+ 秒后会跳转到Tomcat服务器首页
 </body>
 </html>

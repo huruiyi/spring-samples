@@ -10,39 +10,33 @@
 <link href="<%=request.getContextPath()%>/assets/bootstrap/css/bootstrap.css" rel="stylesheet">
 </head>
 <body class="container">
-	<form action="${pageContext.request.contextPath }/item/queryItem.action" method="post">
-		查询条件：
-		<table class="table table-bordered">
-			<tr>
-				<td>
-					<input class="btn" type="submit" value="查询" />
-				</td>
-			</tr>
-		</table>
-		商品列表：
-		<table class="table table-bordered">
-			<tr>
-				<td>商品名称</td>
-				<td>商品价格</td>
-				<td>生产日期</td>
-				<td>商品描述</td>
-				<td>操作</td>
-			</tr>
-			<c:forEach items="${itemsList}" var="item">
-				<tr>
-					<td>${item.name }</td>
-					<td>${item.price }</td>
-					<td>
-						<fmt:formatDate value="${item.createtime}" pattern="yyyy-MM-dd HH:mm:ss" />
-					</td>
-					<td>${item.detail }</td>
-					<td>
-						<a href="${pageContext.request.contextPath }/item/itemDetail.action?id=${item.id}">修改</a>
-					</td>
-				</tr>
-			</c:forEach>
-		</table>
-	</form>
+ <form action="${pageContext.request.contextPath }/item/queryItem.action" method="post">
+  查询条件：
+  <table class="table table-bordered">
+   <tr>
+    <td><input class="btn" type="submit" value="查询" /></td>
+   </tr>
+  </table>
+  商品列表：
+  <table class="table table-bordered">
+   <tr>
+    <td>商品名称</td>
+    <td>商品价格</td>
+    <td>生产日期</td>
+    <td>商品描述</td>
+    <td>操作</td>
+   </tr>
+   <c:forEach items="${itemsList}" var="item">
+    <tr>
+     <td>${item.name }</td>
+     <td>${item.price }</td>
+     <td><fmt:formatDate value="${item.createtime}" pattern="yyyy-MM-dd HH:mm:ss" /></td>
+     <td>${item.detail }</td>
+     <td><a href="${pageContext.request.contextPath }/item/itemDetail.action?id=${item.id}">修改</a></td>
+    </tr>
+   </c:forEach>
+  </table>
+ </form>
 </body>
 
 </html>

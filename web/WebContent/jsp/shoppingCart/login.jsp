@@ -13,20 +13,20 @@
 </script>
 </head>
 <body>
-	<h3>XX网站的登录页面</h3>
-	<font color="red" size="5">${message }</font>
-	<form action="${pageContext.request.contextPath}/shoppingCart/login" method="post">
-		用户名:
-		<input type="text" name="username">
-		<br />
-		密码:
-		<input type="password" name="password">
-		<br />
-		验证码:
-		<input type="text" name="checkcode">
-		<img src="${pageContext.request.contextPath}/shoppingCart/checkimage" style="cursor: pointer" onclick="changeImage();" id="myimage">
-		<br />
-		<input type="submit" value="登录">
-	</form>
+ <h3>XX网站的登录页面</h3>
+ <font color="red" size="5">${message }</font>
+ <form action="${pageContext.request.contextPath}/shoppingCart/login" method="post">
+  用户名:
+  <input type="text" name="username">
+  <br />
+  密码:
+  <input type="password" name="password">
+  <br />
+  验证码:
+  <input type="text" name="checkcode">
+  <img src="${pageContext.request.contextPath}/shoppingCart/checkimage" style="cursor: pointer" onclick="changeImage();" id="myimage">
+  <br />
+  <input type="submit" value="登录">
+ </form>
 </body>
 </html>
