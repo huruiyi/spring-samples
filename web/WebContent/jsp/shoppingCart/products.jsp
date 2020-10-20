@@ -1,4 +1,4 @@
-<%@page import="com.ruiyi.cookie.utils.CookieUtils"%>
+<%@page import="com.example.demo.cookie.utils.CookieUtils"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

@@ -6,7 +6,7 @@
 <title>Insert title here</title>
 </head>
 <body>
- <jsp:useBean id="date" class="com.ruiyi.web.DateFormatBean"></jsp:useBean>
+ <jsp:useBean id="date" class="com.example.demo.web.DateFormatBean"></jsp:useBean>
  <h2>
   Today's Date is
   <%=date.getDate()%>

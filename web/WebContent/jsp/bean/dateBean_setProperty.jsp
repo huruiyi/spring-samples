@@ -6,7 +6,7 @@
 <title>Insert title here</title>
 </head>
 <body>
- <jsp:useBean id="date" class="com.ruiyi.web.DateFormatBean">
+ <jsp:useBean id="date" class="com.example.demo.web.DateFormatBean">
   <jsp:setProperty name="date" property="format" value="EEE, d MMM yyyy HH:mm:ss z" />
  </jsp:useBean>
 
