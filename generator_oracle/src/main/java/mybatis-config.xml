@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="oracle.jdbc.OracleDriver" />
+				<property name="url" value="jdbc:oracle:thin:@localhost:1521:rorcl" />
+				<property name="username" value="c##huruiyi" />
+				<property name="password" value="huruiyi" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="com/example/demo/mapping/UserinfoMapper.xml" />
+		<mapper resource="com/example/demo/cust/UserMapping.xml" />
+		<mapper resource="com/example/demo/cust/UserMappingA.xml" />
+		<mapper resource="com/example/demo/cust/UserMappingB.xml" />
+	</mappers>
+</configuration>
