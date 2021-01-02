@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="default">
+<mapper namespace="com.example.demo.cust.UserMapper">
 	<insert id="insert1" parameterType="com.example.demo.mapping.UserInfo">
 		insert into
 		userinfo(id,username,password,age,insertdate)
@@ -26,6 +26,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		values(#{id},#{username},#{password},#{age},#{insertdate})
 	</insert>
 
+	<insert id="insertUserInfo2" parameterType="com.example.demo.mapping.UserInfo">
+		<selectKey order="BEFORE" resultType="java.lang.Long"
+			keyProperty="id">
+			select idauto.nextval from dual
+		</selectKey>
+		insert into userinfo(id,username,password,age,insertdate)
+		values(#{id},#{username},#{password},#{age},#{insertdate})
+	</insert>
+	
 	<select id="selectById" parameterType="long" resultType="com.example.demo.mapping.UserInfo">
 		select *
 		from userinfo where id=#{userId}
