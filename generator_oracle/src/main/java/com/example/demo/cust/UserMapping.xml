@@ -27,14 +27,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 
 	<insert id="insertUserInfo2" parameterType="com.example.demo.mapping.UserInfo">
-		<selectKey order="BEFORE" resultType="java.lang.Long"
-			keyProperty="id">
+		<selectKey order="BEFORE" resultType="java.lang.Long" keyProperty="id">
 			select idauto.nextval from dual
 		</selectKey>
 		insert into userinfo(id,username,password,age,insertdate)
 		values(#{id},#{username},#{password},#{age},#{insertdate})
 	</insert>
-	
+
 	<select id="selectById" parameterType="long" resultType="com.example.demo.mapping.UserInfo">
 		select *
 		from userinfo where id=#{userId}
@@ -69,12 +68,41 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		insertdate=#{insertdate}
 		where id=#{id}
 	</update>
-	
+
 	<update id="updateByIdMap" parameterType="map">
 		update userinfo set username=#{username},
 		password=#{password},
 		age=#{age},
 		insertdate=#{insertdate}
+		where id=#{id}
+	</update>
+
+
+	<select id="selectAll1" parameterType="map" resultType="com.example.demo.mapping.UserInfo">
+		select * from userinfo
+		<where>
+			<if test="username!=null">username like #{username}</if>
+			<if test="password!=null">and password like #{password}</if>
+		</where>
+	</select>
+
+	<select id="selectAll2" parameterType="map" resultType="com.example.demo.mapping.UserInfo">
+		select * from userinfo where 1=1
+		<choose>
+			<when test="username!=null"> and username like #{username}</when>
+			<when test="password!=null"> and password like #{password}</when>
+			<otherwise>and age=100</otherwise>
+		</choose>
+	</select>
+
+	<update id="updateUserinfoById" parameterType="map">
+		update userinfo
+		<set>
+			<if test="username!=null">username=#{username},</if>
+			<if test="password!=null">password=#{password},</if>
+			<if test="age!=null">age=#{age},</if>
+			<if test="insertdate!=null">insertdate=#{insertdate}</if>
+		</set>
 		where id=#{id}
 	</update>
 </mapper>
