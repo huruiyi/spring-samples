@@ -77,3 +77,11 @@ target
 .idea/
 *.iml
 *.iml
+/generator_mysql/.classpath
+/generator_mysql/.project
+/generator_oracle/.classpath
+/generator_oracle/.project
+/demo3/.classpath
+/demo3/.project
+/demo2/.classpath
+/demo2/.project
