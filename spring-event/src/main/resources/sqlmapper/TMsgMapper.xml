@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.enjoylearning.event.mapper.TMsgMapper">
+	<resultMap id="BaseResultMap" type="com.enjoylearning.event.entity.TMsg">
+		<id column="id" jdbcType="INTEGER" property="id" />
+		<result column="user" jdbcType="VARCHAR" property="user" />
+		<result column="phone" jdbcType="VARCHAR" property="phone" />
+		<result column="content" jdbcType="VARCHAR" property="content" />
+		<result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, user, phone, content, createtime
+	</sql>
+	<select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from t_msg
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from t_msg
+		where id = #{id,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert" parameterType="com.enjoylearning.event.entity.TMsg">
+		insert into t_msg (id, user, phone,
+		content, createtime)
+		values (#{id,jdbcType=INTEGER}, #{user,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR},
+		#{content,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP})
+	</insert>
+	<insert id="insertSelective" parameterType="com.enjoylearning.event.entity.TMsg">
+		insert into t_msg
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="user != null">
+				user,
+			</if>
+			<if test="phone != null">
+				phone,
+			</if>
+			<if test="content != null">
+				content,
+			</if>
+			<if test="createtime != null">
+				createtime,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="user != null">
+				#{user,jdbcType=VARCHAR},
+			</if>
+			<if test="phone != null">
+				#{phone,jdbcType=VARCHAR},
+			</if>
+			<if test="content != null">
+				#{content,jdbcType=VARCHAR},
+			</if>
+			<if test="createtime != null">
+				#{createtime,jdbcType=TIMESTAMP},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.enjoylearning.event.entity.TMsg">
+		update t_msg
+		<set>
+			<if test="user != null">
+				user = #{user,jdbcType=VARCHAR},
+			</if>
+			<if test="phone != null">
+				phone = #{phone,jdbcType=VARCHAR},
+			</if>
+			<if test="content != null">
+				content = #{content,jdbcType=VARCHAR},
+			</if>
+			<if test="createtime != null">
+				createtime = #{createtime,jdbcType=TIMESTAMP},
+			</if>
+		</set>
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.enjoylearning.event.entity.TMsg">
+		update t_msg
+		set user = #{user,jdbcType=VARCHAR},
+		phone = #{phone,jdbcType=VARCHAR},
+		content = #{content,jdbcType=VARCHAR},
+		createtime = #{createtime,jdbcType=TIMESTAMP}
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+</mapper>

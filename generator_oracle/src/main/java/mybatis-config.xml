@@ -8,7 +8,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 			<transactionManager type="JDBC" />
 			<dataSource type="POOLED">
 				<property name="driver" value="oracle.jdbc.OracleDriver" />
-				<property name="url" value="jdbc:oracle:thin:@localhost:1521:rorcl" />
+				<property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl" />
 				<property name="username" value="c##huruiyi" />
 				<property name="password" value="huruiyi" />
 			</dataSource>

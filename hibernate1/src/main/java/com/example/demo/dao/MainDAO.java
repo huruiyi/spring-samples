@@ -12,6 +12,7 @@ import com.example.demo.model.Main;
 import com.example.demo.tools.BaseHibernateDAO;
 
 public class MainDAO extends BaseHibernateDAO {
+	
 	private static final Logger log = LoggerFactory.getLogger(MainDAO.class);
 
 	public static final String MAINNAME = "mainname";
@@ -61,6 +62,7 @@ public class MainDAO extends BaseHibernateDAO {
 		}
 	}
 
+	@SuppressWarnings({ "rawtypes" })
 	public List<Main> findByProperty(String propertyName, Object value) {
 		log.debug("finding Main instance with property: " + propertyName + ", value: " + value);
 		try {

@@ -12,7 +12,9 @@ import com.example.demo.model.Sub;
 import com.example.demo.tools.BaseHibernateDAO;
 
 public class SubDAO extends BaseHibernateDAO {
+	
 	private static final Logger log = LoggerFactory.getLogger(SubDAO.class);
+	
 	public static final String SUBNAME = "subname";
 
 	public void save(Sub transientInstance) {
