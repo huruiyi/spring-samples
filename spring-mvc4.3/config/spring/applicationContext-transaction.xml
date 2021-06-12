@@ -16,7 +16,6 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
-	<!-- 通知 -->
 	<tx:advice id="txAdvice" transaction-manager="transactionManager">
 		<tx:attributes>
 			<!-- 传播行为 -->
@@ -29,7 +28,6 @@
 			<tx:method name="select*" propagation="SUPPORTS" read-only="true" />
 		</tx:attributes>
 	</tx:advice>
-	<!-- aop -->
 	<aop:config>
 		<aop:advisor advice-ref="txAdvice" pointcut="execution(* cn.example.ssm.service.impl.*.*(..))" />
 	</aop:config>

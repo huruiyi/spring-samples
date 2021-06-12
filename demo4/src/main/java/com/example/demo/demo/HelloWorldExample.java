@@ -17,7 +17,7 @@ public class HelloWorldExample extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		ResourceBundle rb = ResourceBundle.getBundle("LocalStrings", request.getLocale());
-		response.setContentType("text/html");
+		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
 
 		out.println("<html>");
