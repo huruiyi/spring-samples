@@ -3,6 +3,7 @@ package com.example.demo.context;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *      3. 取出  存在  servletContext 的次数, 显示一下. 
  * 
  */
+@WebServlet(urlPatterns = "/context/access")
 public class AccessTimesServlet extends HttpServlet {
 
 	private static final long serialVersionUID = -2758872636528299105L;

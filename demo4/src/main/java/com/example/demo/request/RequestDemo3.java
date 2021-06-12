@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  *  referer 实现资源防盗链  
  * 
  */
-@WebServlet(urlPatterns = "/request3")
+@WebServlet(urlPatterns = "/request/request3")
 public class RequestDemo3 extends HttpServlet {
 
 	private static final long serialVersionUID = 7440772048171963008L;

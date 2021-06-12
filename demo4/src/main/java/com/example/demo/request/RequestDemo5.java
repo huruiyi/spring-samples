@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /*
  *    获得 复杂 表单的数据 (重要 )
   */
-@WebServlet(urlPatterns = "/request5")
+@WebServlet(urlPatterns = "/request/request5")
 public class RequestDemo5 extends HttpServlet {
 
 	private static final long serialVersionUID = 5513434565456938346L;

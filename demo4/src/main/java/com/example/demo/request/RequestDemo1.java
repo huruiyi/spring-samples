@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
  *  request 获得 客户机信息
  * 
  */
-@WebServlet(urlPatterns = "/request1")
+@WebServlet(urlPatterns = "/request/request1")
 public class RequestDemo1 extends HttpServlet {
 
 	private static final long serialVersionUID = 6041209371199830764L;

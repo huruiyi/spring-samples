@@ -5,6 +5,7 @@ import java.util.Enumeration;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  *  使用 serlvletContext 获得  web应用全局的初始化参数信息
  * 
  */
+@WebServlet(urlPatterns = "/context/serlvet1")
 public class ContextSerlvet1 extends HttpServlet {
 
 	private static final long serialVersionUID = -2587461639198040232L;

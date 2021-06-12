@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 /*
  *   实现 用户上次的访问 时间 代码 实现 
  */
-@WebServlet(urlPatterns = "/access")
+@WebServlet(urlPatterns = "/cookie/access")
 public class AccessServlet extends HttpServlet {
 
 	private static final long serialVersionUID = -1689460302771112587L;

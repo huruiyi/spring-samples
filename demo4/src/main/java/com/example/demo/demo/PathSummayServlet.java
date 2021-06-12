@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *     // 给  web应用的  -----/  ,  那么/ 表示 当前 web应用的 根目录 
  * 
  */
-@WebServlet(urlPatterns = "/summary")
+@WebServlet(urlPatterns = "/demo/summary")
 public class PathSummayServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 489027364330533617L;

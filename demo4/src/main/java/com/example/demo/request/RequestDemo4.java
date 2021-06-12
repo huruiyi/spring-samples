@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  * 		小结:  以后 表单提交, 用post , 一行代码解决 乱码 
  * 
  */
-@WebServlet(urlPatterns = "/request4")
+@WebServlet(urlPatterns = "/request/request4")
 public class RequestDemo4 extends HttpServlet {
 
 	private static final long serialVersionUID = 9041911226013121112L;

@@ -5,18 +5,12 @@ import java.io.InputStream;
 
 public class Reading {
 	public static void main(String[] args) {
-		
-		String path1 = "1.txt";
+
+		String path = System.getProperty("user.dir");
+		System.out.println(path);
+
+		String path1 = path + "\\src\\main\\resources\\1.txt";
 		readContent(path1);
-
-		String path2 = "WebContent/2.txt";
-		readContent(path2);
-
-		String path3 = "WebContent/WEB-INF/3.txt";
-		readContent(path3);
-
-		String path4 = "src/4.txt";
-		readContent(path4);
 	}
 
 	// 只需要将 路径传递进来, 就可以 打印文件中的 内容

@@ -7,6 +7,7 @@ import java.net.URL;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *    	servletContext对象 
  * 
  */
+@WebServlet(urlPatterns = "/demo/read")
 public class ReadContentServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 8816722636855063702L;
@@ -28,22 +30,15 @@ public class ReadContentServlet extends HttpServlet {
 		System.out.println(ip);
 		ServletContext context = getServletContext();
 
-		// 读取 1.txt
-		// 1.txt 不会发布到 tomcat服务器中去, 所以 没法读
+		String path2 = context.getRealPath("/WEB-INF/classes/1.txt");
+		System.out.println("path:" + path2);
+		readContent(path2);
+		System.out.println("*************************************************");
 
-		// 读取2.txt 文件
-
-		String realPath2 = context.getRealPath("/2.txt");
-		System.out.println(realPath2);
-		readContent(realPath2);
-
-		String path3 = context.getRealPath("/WEB-INF/3.txt");
+		String path3 = context.getRealPath("/WEB-INF/2.txt");
+		System.out.println("path:" + path3);
 		readContent(path3);
-
-		String path4 = context.getRealPath("/WEB-INF/classes/4.txt");
-		readContent(path4);
-
-		System.out.println("==========");
+		System.out.println("*************************************************");
 
 		// 注意: 以上就是 ｗｅｂ应用中如何使用serlvetContext 对象去读取资源文件
 
@@ -65,12 +60,12 @@ public class ReadContentServlet extends HttpServlet {
 		}
 
 		// 使用 类加载器 去获得 4.txt 的 路径,获得路径后, 那么 就 o 了
-		URL url0 = ReadContentServlet.class.getClassLoader().getResource("4.txt");
+		URL url0 = ReadContentServlet.class.getClassLoader().getResource("1.txt");
 		String file0 = url0.getFile();
 		readContent(file0);
 
 		// 使用这种方式 的时候 要 加 个 /
-		URL url1 = ReadContentServlet.class.getResource("/4.txt");
+		URL url1 = ReadContentServlet.class.getResource("/2.txt");
 		String file1 = url1.getFile();
 		readContent(file1);
 
@@ -87,7 +82,6 @@ public class ReadContentServlet extends HttpServlet {
 
 	// 只需要将 路径传递进来, 就可以 打印文件中的 内容
 	public static void readContent(String path) {
-
 		try {
 			InputStream in = new FileInputStream(path);
 
@@ -98,13 +92,12 @@ public class ReadContentServlet extends HttpServlet {
 			}
 			in.close();
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(path + "读取异常");
 		}
 
 	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 		doGet(request, response);
 	}
 

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  *  获得请求头的信息
  * 
  */
-@WebServlet(urlPatterns = "/request2")
+@WebServlet(urlPatterns = "/request/request2")
 public class RequestDemo2 extends HttpServlet {
 
 	private static final long serialVersionUID = 1937544123148814896L;

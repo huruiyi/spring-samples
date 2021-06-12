@@ -54,6 +54,11 @@
 			<mvc:mapping path="/**" />
 			<bean class="cn.itheima.interceptor.Interceptor3"></bean>
 		</mvc:interceptor>
+
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<bean class="cn.itheima.interceptor.Interceptor4"></bean>
+		</mvc:interceptor>
 	</mvc:interceptors>
 
 
