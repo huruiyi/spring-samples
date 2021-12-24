@@ -21,17 +21,16 @@ import com.enjoylearning.event.zk.ZookeeperConnector;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:applicationContext.xml")
 public class ZookeeperEventTest {
-	
-	private static final String CONF_PATH="/configration";
-	
-	private static final String ZOOKEEPER_IP_PORT ="localhost:2181";
-	
-	
+
+	private static final String CONF_PATH = "/configration";
+
+	private static final String ZOOKEEPER_IP_PORT = "localhost:2181";
+
 	@Resource
 	private HotelOrderService hos;
 
 	@Before
-	public void init(){
+	public void init() {
 //		ZkClient client = new ZkClient(ZOOKEEPER_IP_PORT, 1000, 1000, new SerializableSerializer());
 //		if(client.exists(CONF_PATH)){
 //			client.delete(CONF_PATH);
@@ -39,10 +38,10 @@ public class ZookeeperEventTest {
 //		client.createPersistent(CONF_PATH);
 //		client.writeData(CONF_PATH, "192.168.1.1");
 	}
-	
-	//模拟分布式环境，有五个应用要读取配置中心的配置信息
+
+	// 模拟分布式环境，有五个应用要读取配置中心的配置信息
 	@Test
-	public void zkEeventTest(){
+	public void zkEeventTest() {
 		Thread t1 = new Thread(new ZookeeperConnector());
 		Thread t2 = new Thread(new ZookeeperConnector());
 		Thread t3 = new Thread(new ZookeeperConnector());
@@ -54,32 +53,27 @@ public class ZookeeperEventTest {
 		t4.start();
 		t5.start();
 		try {
-			Thread.currentThread().join();//主线程等待子线程结束
+			Thread.currentThread().join();// 主线程等待子线程结束
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-	
-	
-	
+
 	@Test
-	public void zkDataChange(){
+	public void zkDataChange() {
 		ZkClient client = new ZkClient(ZOOKEEPER_IP_PORT, 1000, 1000, new SerializableSerializer());
 		client.writeData(CONF_PATH, "192.168.1.2");
 	}
-	
+
 	@Test
 	@Transactional
 	@Commit
-	public void testHotelOrder() throws InterruptedException{
+	public void testHotelOrder() throws InterruptedException {
 		THotelOrder order = new THotelOrder(1, "u00001", "seven", new Date());
 		hos.addHotealOrder(order);
-		Thread.currentThread().sleep(500);
+		Thread.currentThread();
+		// Thread.currentThread().sleep(500);
+		Thread.sleep(500);
 	}
-	
-	
-	
-
 
 }

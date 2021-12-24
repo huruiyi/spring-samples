@@ -16,7 +16,7 @@ public class CustomExceptionResolver implements HandlerExceptionResolver {
 
 	public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object obj,
 			Exception e) {
-		// TODO Auto-generated method stub 发生异常的地方 Serivce层 方法 包名+类名+方法名（形参） 字符串
+		// Auto-generated method stub 发生异常的地方 Serivce层 方法 包名+类名+方法名（形参） 字符串
 		// 日志 1.发布 tomcat war Eclipse 2.发布Tomcat 服务器上 Linux Log4j
 
 		ModelAndView mav = new ModelAndView();

@@ -28,8 +28,8 @@ public class RunSqlScript extends HttpServlet {
 	public void run() {
 		System.out.println("======  数据库初始化START   ======");
 
-		//https://blog.csdn.net/weixin_42191996/article/details/102992072
-		
+		// https://blog.csdn.net/weixin_42191996/article/details/102992072
+
 		Connection con = DBUtils.getInitCon();
 
 		ScriptRunner runner = new ScriptRunner(con);
@@ -43,7 +43,6 @@ public class RunSqlScript extends HttpServlet {
 			runner.runScript(reader);
 			con.close();
 		} catch (IOException | SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println("====== 数据库初始化SUCCESS  ======");

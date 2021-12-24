@@ -19,7 +19,6 @@ public class UploadServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 6339400552646746952L;
 
-	@SuppressWarnings("unchecked")
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		DiskFileItemFactory factory = new DiskFileItemFactory();

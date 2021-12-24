@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.example.demo.mapping.UserInfo;
 
+@SuppressWarnings({ "rawtypes" })
 public interface UserMapper {
 
 	public void insertUserInfo2(UserInfo userInfo);

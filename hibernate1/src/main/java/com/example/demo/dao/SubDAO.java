@@ -11,10 +11,11 @@ import org.slf4j.LoggerFactory;
 import com.example.demo.model.Sub;
 import com.example.demo.tools.BaseHibernateDAO;
 
+@SuppressWarnings({ "deprecation", "rawtypes" })
 public class SubDAO extends BaseHibernateDAO {
-	
+
 	private static final Logger log = LoggerFactory.getLogger(SubDAO.class);
-	
+
 	public static final String SUBNAME = "subname";
 
 	public void save(Sub transientInstance) {

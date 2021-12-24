@@ -27,7 +27,6 @@ public class ZookeeperConnector implements Runnable {
 		IZkDataListener listener = new IZkDataListener() {
 
 			public void handleDataDeleted(String dataPath) throws Exception {
-				// TODO Auto-generated method stub
 
 			}
 
