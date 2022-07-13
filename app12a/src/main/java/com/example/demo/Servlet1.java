@@ -1,4 +1,4 @@
-package main.java.com.example.demo;
+package com.example.demo;
 
 import java.io.IOException;
 
@@ -16,14 +16,12 @@ import javax.servlet.http.HttpServletResponse;
  * <auth-constraint> <role-name>member</role-name>
  * <role-name>manager</role-name> </auth-constraint> 也可以指定多个角色
  * 
-  <role rolename="tomcat"/>
-  <role rolename="admin"/>
-  <role rolename="role1"/>
-  <role rolename="member"/>
-  <user username="member" password="member" roles="member"/>
-  <user username="tomcat" password="tomcat" roles="tomcat"/>
-  <user username="both" password="both" roles="tomcat,role1"/>
-  <user username="role1" password="role1" roles="role1,admin"/>
+ * <role rolename="tomcat"/> <role rolename="admin"/> <role rolename="role1"/>
+ * <role rolename="member"/>
+ * <user username="member" password="member" roles="member"/>
+ * <user username="tomcat" password="tomcat" roles="tomcat"/>
+ * <user username="both" password="both" roles="tomcat,role1"/>
+ * <user username="role1" password="role1" roles="role1,admin"/>
  *
  */
 @WebServlet(urlPatterns = { "/servlet1" })

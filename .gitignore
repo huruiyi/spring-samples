@@ -59,13 +59,6 @@ local.properties
 .scala_dependencies
 .worksheet
 
-### Eclipse Patch ###
-# Eclipse Core
-.project
-
-# JDT-specific (Eclipse Java Development Tools)
-.classpath
-
 # Annotation Processing
 .apt_generated
 
@@ -77,11 +70,3 @@ target
 .idea/
 *.iml
 *.iml
-/generator_mysql/.classpath
-/generator_mysql/.project
-/generator_oracle/.classpath
-/generator_oracle/.project
-/demo3/.classpath
-/demo3/.project
-/demo2/.classpath
-/demo2/.project

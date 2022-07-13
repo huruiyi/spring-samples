@@ -33,7 +33,6 @@ public class GreetingController {
         http://localhost:8080/get?id=1
     */
     @RequestMapping("/get")
-    @ResponseBody
     public String get(User user) {
         User u = userService.getNameById(user);
         return JSONObject.toJSONString(u);
@@ -42,7 +41,7 @@ public class GreetingController {
 
     @RequestMapping("/index")
     public ModelAndView mvc1() {
-        return new ModelAndView("index");
+        return new ModelAndView("student/index");
     }
 
     @RequestMapping("/helloworld")
