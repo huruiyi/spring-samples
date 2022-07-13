@@ -79,7 +79,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>spring-mvc4.3.2</finalName>
+		<finalName>springMvc1</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

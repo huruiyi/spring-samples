@@ -82,7 +82,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>spring-mvc-2</finalName>
+		<finalName>springMvc2</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

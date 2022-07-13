@@ -22,7 +22,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>web-template</finalName>
+		<finalName>app12a</finalName>
 		<plugins>
 			<!--fix: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer -->
 			<plugin>
