@@ -2,7 +2,6 @@ package com.example.demo.service;
 
 import com.example.demo.dao.UserDao;
 import com.example.demo.domain.User;
-import org.springframework.stereotype.Service;
 
 public class FooServiceDaoImpl implements FooService {
 

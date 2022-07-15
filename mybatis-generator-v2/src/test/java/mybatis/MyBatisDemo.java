@@ -7,8 +7,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import mybatis.mapper.CountryMapper;
-import mybatis.model.Country;
+import mybatis.mapper.CityMapper;
+import mybatis.model.City;
 
 public class MyBatisDemo {
 	public static void main(String[] args) {
@@ -19,8 +19,8 @@ public class MyBatisDemo {
 			inputStream.close();
 
 			SqlSession sqlSession = sqlSessionFactory.openSession();
-			CountryMapper mapper = sqlSession.getMapper(CountryMapper.class);
-			Country country = mapper.selectByPrimaryKey(1);
+			CityMapper mapper = sqlSession.getMapper(CityMapper.class);
+			City country = mapper.selectByPrimaryKey(1);
 			System.out.println(country.toString());
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

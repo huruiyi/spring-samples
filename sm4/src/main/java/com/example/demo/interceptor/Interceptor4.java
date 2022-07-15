@@ -3,10 +3,13 @@ package com.example.demo.interceptor;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-public class Interceptor4 extends HandlerInterceptorAdapter {
+/**
+ * 过时：HandlerInterceptorAdapter
+ */
+public class Interceptor4 implements HandlerInterceptor {
 
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
@@ -25,5 +28,5 @@ public class Interceptor4 extends HandlerInterceptorAdapter {
 			throws Exception {
 		System.out.println("======Interceptor4=======afterCompletion========");
 	}
-	
+
 }

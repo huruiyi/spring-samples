@@ -10,7 +10,7 @@ public interface CountryMapper {
 
     int deleteByExample(CountryExample example);
 
-    int deleteByPrimaryKey(Integer id);
+    int deleteByPrimaryKey(String code);
 
     int insert(Country record);
 
@@ -18,7 +18,7 @@ public interface CountryMapper {
 
     List<Country> selectByExample(CountryExample example);
 
-    Country selectByPrimaryKey(Integer id);
+    Country selectByPrimaryKey(String code);
 
     int updateByExampleSelective(@Param("record") Country record, @Param("example") CountryExample example);
 

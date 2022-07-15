@@ -21,7 +21,7 @@ public class MyBatisDemo {
 
 			SqlSession sqlSession = sqlSessionFactory.openSession();
 			CountryMapper mapper = sqlSession.getMapper(CountryMapper.class);
-			Country country = mapper.selectByPrimaryKey(1);
+			Country country = mapper.selectByPrimaryKey("ABW");
 			System.out.println(country.toString());
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class DBTools {
-	
+
 	public static SqlSession getSqlSession() throws IOException {
 		String configFile = "mybatis-config.xml";
 		InputStream configStream = Resources.getResourceAsStream(configFile);
@@ -17,5 +17,5 @@ public class DBTools {
 		SqlSessionFactory factory = builder.build(configStream);
 		return factory.openSession();
 	}
-	
+
 }

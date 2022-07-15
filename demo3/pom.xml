@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
+
 	<groupId>com.example.demo</groupId>
 	<artifactId>demo3</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
+
 	<name>demo3 Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+
 	<properties>
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -15,6 +19,7 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<spring.version>5.3.20</spring.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
