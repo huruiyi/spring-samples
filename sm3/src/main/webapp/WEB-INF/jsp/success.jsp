@@ -6,9 +6,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>修改商品信息</title>
-
+<link href="${pageContext.request.contextPath }/public/bootstrap/css/bootstrap.css" rel="stylesheet">
 </head>
-<body>
+<body class="container">
  <label>成功</label>
 </body>
 

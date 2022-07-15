@@ -5,11 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>修改商品信息</title>
 <link href="${pageContext.request.contextPath }/public/bootstrap/css/bootstrap.css" rel="stylesheet">
+<title>查询商品列表</title>
 </head>
 <body class="container">
- <label>${error}</label>
+ <label>${msg}</label>
 </body>
 
 </html>

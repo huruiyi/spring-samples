@@ -6,11 +6,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>查询商品列表</title>
+<link href="${pageContext.request.contextPath }/public/bootstrap/css/bootstrap.css" rel="stylesheet">
 </head>
-<body>
+<body class="container">
  <form action="${pageContext.request.contextPath }/item/queryitem" method="post">
   查询条件：
-  <table width="100%" border=1>
+  <table class="table table-bordered">
    <tr>
     <td>
      <input type="submit" value="查询" />
@@ -21,7 +22,7 @@
  商品列表：
  <%-- <form action="${pageContext.request.contextPath }/deletes" method="post"> --%>
  <form action="${pageContext.request.contextPath }/updates" method="post">
-  <table width="100%" border=1>
+  <table class="table table-bordered">
    <tr>
     <td>
      <input type="checkbox" name="ids" value="">
@@ -38,10 +39,10 @@
       <input type="checkbox" name="ids" value="${item.id }">
      </td>
      <td>
-      <input type="text" name="itemsList[${s.index}].name" value="${item.name }">
+      <input class="form-control" type="text" name="itemsList[${s.index}].name" value="${item.name }">
      </td>
      <td>
-      <input type="text" name="itemsList[${s.index }].price" value="${item.price }">
+      <input class="form-control" type="text" name="itemsList[${s.index }].price" value="${item.price }">
      </td>
      <td>
       <fmt:formatDate value="${item.createtime}" pattern="yyyy-MM-dd HH:mm:ss" />
@@ -55,8 +56,8 @@
     </tr>
    </c:forEach>
   </table>
-  <input type="submit" value="删除">
-  <input type="submit" value="修改">
+  <input type="submit" class="btn btn-danger"  value="删除">
+  <input type="submit" class="btn btn-primary"  value="修改">
  </form>
 
 </body>

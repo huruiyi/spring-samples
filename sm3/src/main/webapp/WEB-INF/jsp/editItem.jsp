@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>修改商品信息</title>
+<link href="${pageContext.request.contextPath }/public/bootstrap/css/bootstrap.css" rel="stylesheet">
 <script type="text/javascript" src="${pageContext.request.contextPath }/public/js/jquery-1.4.4.min.js"></script>
 <script type="text/javascript">
 	$(function() {
@@ -25,21 +26,21 @@
 	});
 </script>
 </head>
-<body>
+<body class="container">
  <form id="itemForm" action="${pageContext.request.contextPath }/updateitem" method="post" enctype="multipart/form-data">
   <input type="hidden" name="items.id" value="${item.id }" />
   修改商品信息：
-  <table width="100%" border=1>
+  <table class="table table-bordered">
    <tr>
     <td>商品名称</td>
     <td>
-     <input type="text" name="items.name" value="${item.name }" />
+     <input class="form-control" type="text" name="items.name" value="${item.name }" />
     </td>
    </tr>
    <tr>
     <td>商品价格</td>
     <td>
-     <input type="text" name="items.price" value="${item.price }" />
+     <input class="form-control" type="text" name="items.price" value="${item.price }" />
     </td>
    </tr>
    <tr>
@@ -49,13 +50,13 @@
       <img src="/pic/${item.pic}" width=100 height=100 />
       <br />
      </c:if>
-     <input type="file" name="pictureFile" />
+     <input class="form-control" type="file" name="pictureFile" />
     </td>
    </tr>
    <tr>
     <td>商品简介</td>
     <td>
-     <textarea rows="3" cols="30" name="items.detail">${item.detail }</textarea>
+     <textarea class="form-control" rows="3" cols="30" name="items.detail">${item.detail }</textarea>
     </td>
    </tr>
    <tr>

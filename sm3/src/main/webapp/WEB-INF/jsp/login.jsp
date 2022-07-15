@@ -6,13 +6,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>修改商品信息</title>
-
+<link href="${pageContext.request.contextPath }/public/bootstrap/css/bootstrap.css" rel="stylesheet">
 </head>
-<body>
- <form action="${pageContext.request.contextPath }/login" method="post">
+<body class="container">
+ <form class="form-inline" action="${pageContext.request.contextPath }/login" method="post">
   用户名：
-  <input type="text" name="username" value="safdsdafas">
-  <input type="submit" value="提交">
+  <input class="form-control" type="text" name="username" value="safdsdafas">
+  <input class="btn btn-primary" type="submit" value="提交">
  </form>
 </body>
 
