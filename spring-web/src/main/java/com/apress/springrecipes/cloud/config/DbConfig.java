@@ -6,8 +6,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.jdbc.datasource.init.DataSourceInitializer;
 import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
 
@@ -16,12 +14,12 @@ import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
  */
 @ComponentScan(basePackages = { "com.apress.springrecipes.cloud" })
 @Configuration
-public class ContactConfiguration {
+public class DbConfig {
 
-	@Bean
-	public DataSource dataSource() {
-		return new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.H2).build();
-	}
+//	@Bean
+//	public DataSource dataSource() {
+//		return new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.H2).build();
+//	}
 
 	@Bean
 	public DataSourceInitializer dataSourceInitializer(DataSource dataSource) {

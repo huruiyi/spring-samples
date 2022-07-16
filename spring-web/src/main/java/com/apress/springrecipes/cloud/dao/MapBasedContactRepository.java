@@ -2,8 +2,8 @@ package com.apress.springrecipes.cloud.dao;
 
 import org.springframework.stereotype.Repository;
 
-import com.apress.springrecipes.cloud.Contact;
 import com.apress.springrecipes.cloud.ContactRepository;
+import com.apress.springrecipes.cloud.model.Contact;
 
 import java.util.ArrayList;
 import java.util.HashMap;

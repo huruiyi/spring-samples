@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Service;
 
-import com.apress.springrecipes.cloud.Contact;
 import com.apress.springrecipes.cloud.ContactRepository;
+import com.apress.springrecipes.cloud.model.Contact;
 
 @Service
 public class JdbcContactRepository extends JdbcDaoSupport implements ContactRepository {

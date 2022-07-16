@@ -1,4 +1,4 @@
-package com.apress.springrecipes.cloud;
+package com.apress.springrecipes.cloud.model;
 
 public class Contact {
 

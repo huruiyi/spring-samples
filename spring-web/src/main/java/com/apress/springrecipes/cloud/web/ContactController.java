@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.apress.springrecipes.cloud.Contact;
 import com.apress.springrecipes.cloud.ContactRepository;
+import com.apress.springrecipes.cloud.model.Contact;
 
 @Controller
 @RequestMapping("/contact")
