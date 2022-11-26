@@ -13,7 +13,6 @@ public class StudentController {
         return "/student/index";
     }
 
-
     @RequestMapping(value = "/greet")
     @ResponseBody
     public String greet() {
