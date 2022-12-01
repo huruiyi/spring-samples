@@ -44,11 +44,11 @@ public class ContactController {
 
 	@GetMapping
 	public String list(Model model) {
-		List<Contact> list0 = contactRepository0.findAll();
+		//List<Contact> list0 = contactRepository0.findAll();
 		List<Contact> list1 = contactRepository1.findAll();
 		List<Contact> list2 = contactRepository2.findAll();
 
-		System.out.printf("list0 size:%d\n", list0.size());
+		//System.out.printf("list0 size:%d\n", list0.size());
 		System.out.printf("list1 size:%d\n", list1.size());
 		System.out.printf("list2 size:%d\n", list2.size());
 		model.addAttribute("contacts", contactRepository.findAll());

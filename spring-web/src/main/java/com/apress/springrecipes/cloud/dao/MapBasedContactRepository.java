@@ -1,17 +1,19 @@
 package com.apress.springrecipes.cloud.dao;
 
-import org.springframework.stereotype.Repository;
-
-import com.apress.springrecipes.cloud.ContactRepository;
-import com.apress.springrecipes.cloud.model.Contact;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
-@Repository
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
+
+import com.apress.springrecipes.cloud.ContactRepository;
+import com.apress.springrecipes.cloud.model.Contact;
+
+@Primary
+@Service
 public class MapBasedContactRepository implements ContactRepository {
 
 	private final AtomicLong SEQUENCE = new AtomicLong();

@@ -58,11 +58,10 @@
    <div title="书籍管理" data-options="iconCls:'icon-shuji'" style="padding: 10px">
     <a href="javascript:openTab(' 全部书籍','allBooksManage.jsp','icon-shuben')" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-shuben'" style="width: 150px;">全部书籍</a>
    </div>
-   
+
    <div title="系统管理" data-options="iconCls:'icon-item'" style="padding: 10px; border: none;">
     <a href="javascript:openTab(' 管理员列表','userManage.jsp','icon-lxr')" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-lxr'" style="width: 150px;"> 管理员列表</a>
-    <a href="javascript:openTab(' Druid','../
-    druid','icon-lxr')" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-lxr'" style="width: 150px;"> Druid </a>
+    <a href="javascript:openTab(' Druid','../druid/','icon-lxr')" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-lxr'" style="width: 150px;"> Druid </a>
     <a href="javascript:logout()" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-exit'" style="width: 150px;"> 安全退出</a>
    </div>
   </div>
