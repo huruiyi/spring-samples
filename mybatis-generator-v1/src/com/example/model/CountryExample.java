@@ -1,5 +1,6 @@
 package com.example.model;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -394,52 +395,52 @@ public class CountryExample {
             return (Criteria) this;
         }
 
-        public Criteria andSurfaceareaEqualTo(Float value) {
+        public Criteria andSurfaceareaEqualTo(BigDecimal value) {
             addCriterion("SurfaceArea =", value, "surfacearea");
             return (Criteria) this;
         }
 
-        public Criteria andSurfaceareaNotEqualTo(Float value) {
+        public Criteria andSurfaceareaNotEqualTo(BigDecimal value) {
             addCriterion("SurfaceArea <>", value, "surfacearea");
             return (Criteria) this;
         }
 
-        public Criteria andSurfaceareaGreaterThan(Float value) {
+        public Criteria andSurfaceareaGreaterThan(BigDecimal value) {
             addCriterion("SurfaceArea >", value, "surfacearea");
             return (Criteria) this;
         }
 
-        public Criteria andSurfaceareaGreaterThanOrEqualTo(Float value) {
+        public Criteria andSurfaceareaGreaterThanOrEqualTo(BigDecimal value) {
             addCriterion("SurfaceArea >=", value, "surfacearea");
             return (Criteria) this;
         }
 
-        public Criteria andSurfaceareaLessThan(Float value) {
+        public Criteria andSurfaceareaLessThan(BigDecimal value) {
             addCriterion("SurfaceArea <", value, "surfacearea");
             return (Criteria) this;
         }
 
-        public Criteria andSurfaceareaLessThanOrEqualTo(Float value) {
+        public Criteria andSurfaceareaLessThanOrEqualTo(BigDecimal value) {
             addCriterion("SurfaceArea <=", value, "surfacearea");
             return (Criteria) this;
         }
 
-        public Criteria andSurfaceareaIn(List<Float> values) {
+        public Criteria andSurfaceareaIn(List<BigDecimal> values) {
             addCriterion("SurfaceArea in", values, "surfacearea");
             return (Criteria) this;
         }
 
-        public Criteria andSurfaceareaNotIn(List<Float> values) {
+        public Criteria andSurfaceareaNotIn(List<BigDecimal> values) {
             addCriterion("SurfaceArea not in", values, "surfacearea");
             return (Criteria) this;
         }
 
-        public Criteria andSurfaceareaBetween(Float value1, Float value2) {
+        public Criteria andSurfaceareaBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("SurfaceArea between", value1, value2, "surfacearea");
             return (Criteria) this;
         }
 
-        public Criteria andSurfaceareaNotBetween(Float value1, Float value2) {
+        public Criteria andSurfaceareaNotBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("SurfaceArea not between", value1, value2, "surfacearea");
             return (Criteria) this;
         }
@@ -574,52 +575,52 @@ public class CountryExample {
             return (Criteria) this;
         }
 
-        public Criteria andLifeexpectancyEqualTo(Float value) {
+        public Criteria andLifeexpectancyEqualTo(BigDecimal value) {
             addCriterion("LifeExpectancy =", value, "lifeexpectancy");
             return (Criteria) this;
         }
 
-        public Criteria andLifeexpectancyNotEqualTo(Float value) {
+        public Criteria andLifeexpectancyNotEqualTo(BigDecimal value) {
             addCriterion("LifeExpectancy <>", value, "lifeexpectancy");
             return (Criteria) this;
         }
 
-        public Criteria andLifeexpectancyGreaterThan(Float value) {
+        public Criteria andLifeexpectancyGreaterThan(BigDecimal value) {
             addCriterion("LifeExpectancy >", value, "lifeexpectancy");
             return (Criteria) this;
         }
 
-        public Criteria andLifeexpectancyGreaterThanOrEqualTo(Float value) {
+        public Criteria andLifeexpectancyGreaterThanOrEqualTo(BigDecimal value) {
             addCriterion("LifeExpectancy >=", value, "lifeexpectancy");
             return (Criteria) this;
         }
 
-        public Criteria andLifeexpectancyLessThan(Float value) {
+        public Criteria andLifeexpectancyLessThan(BigDecimal value) {
             addCriterion("LifeExpectancy <", value, "lifeexpectancy");
             return (Criteria) this;
         }
 
-        public Criteria andLifeexpectancyLessThanOrEqualTo(Float value) {
+        public Criteria andLifeexpectancyLessThanOrEqualTo(BigDecimal value) {
             addCriterion("LifeExpectancy <=", value, "lifeexpectancy");
             return (Criteria) this;
         }
 
-        public Criteria andLifeexpectancyIn(List<Float> values) {
+        public Criteria andLifeexpectancyIn(List<BigDecimal> values) {
             addCriterion("LifeExpectancy in", values, "lifeexpectancy");
             return (Criteria) this;
         }
 
-        public Criteria andLifeexpectancyNotIn(List<Float> values) {
+        public Criteria andLifeexpectancyNotIn(List<BigDecimal> values) {
             addCriterion("LifeExpectancy not in", values, "lifeexpectancy");
             return (Criteria) this;
         }
 
-        public Criteria andLifeexpectancyBetween(Float value1, Float value2) {
+        public Criteria andLifeexpectancyBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("LifeExpectancy between", value1, value2, "lifeexpectancy");
             return (Criteria) this;
         }
 
-        public Criteria andLifeexpectancyNotBetween(Float value1, Float value2) {
+        public Criteria andLifeexpectancyNotBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("LifeExpectancy not between", value1, value2, "lifeexpectancy");
             return (Criteria) this;
         }
@@ -634,52 +635,52 @@ public class CountryExample {
             return (Criteria) this;
         }
 
-        public Criteria andGnpEqualTo(Float value) {
+        public Criteria andGnpEqualTo(BigDecimal value) {
             addCriterion("GNP =", value, "gnp");
             return (Criteria) this;
         }
 
-        public Criteria andGnpNotEqualTo(Float value) {
+        public Criteria andGnpNotEqualTo(BigDecimal value) {
             addCriterion("GNP <>", value, "gnp");
             return (Criteria) this;
         }
 
-        public Criteria andGnpGreaterThan(Float value) {
+        public Criteria andGnpGreaterThan(BigDecimal value) {
             addCriterion("GNP >", value, "gnp");
             return (Criteria) this;
         }
 
-        public Criteria andGnpGreaterThanOrEqualTo(Float value) {
+        public Criteria andGnpGreaterThanOrEqualTo(BigDecimal value) {
             addCriterion("GNP >=", value, "gnp");
             return (Criteria) this;
         }
 
-        public Criteria andGnpLessThan(Float value) {
+        public Criteria andGnpLessThan(BigDecimal value) {
             addCriterion("GNP <", value, "gnp");
             return (Criteria) this;
         }
 
-        public Criteria andGnpLessThanOrEqualTo(Float value) {
+        public Criteria andGnpLessThanOrEqualTo(BigDecimal value) {
             addCriterion("GNP <=", value, "gnp");
             return (Criteria) this;
         }
 
-        public Criteria andGnpIn(List<Float> values) {
+        public Criteria andGnpIn(List<BigDecimal> values) {
             addCriterion("GNP in", values, "gnp");
             return (Criteria) this;
         }
 
-        public Criteria andGnpNotIn(List<Float> values) {
+        public Criteria andGnpNotIn(List<BigDecimal> values) {
             addCriterion("GNP not in", values, "gnp");
             return (Criteria) this;
         }
 
-        public Criteria andGnpBetween(Float value1, Float value2) {
+        public Criteria andGnpBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("GNP between", value1, value2, "gnp");
             return (Criteria) this;
         }
 
-        public Criteria andGnpNotBetween(Float value1, Float value2) {
+        public Criteria andGnpNotBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("GNP not between", value1, value2, "gnp");
             return (Criteria) this;
         }
@@ -694,52 +695,52 @@ public class CountryExample {
             return (Criteria) this;
         }
 
-        public Criteria andGnpoldEqualTo(Float value) {
+        public Criteria andGnpoldEqualTo(BigDecimal value) {
             addCriterion("GNPOld =", value, "gnpold");
             return (Criteria) this;
         }
 
-        public Criteria andGnpoldNotEqualTo(Float value) {
+        public Criteria andGnpoldNotEqualTo(BigDecimal value) {
             addCriterion("GNPOld <>", value, "gnpold");
             return (Criteria) this;
         }
 
-        public Criteria andGnpoldGreaterThan(Float value) {
+        public Criteria andGnpoldGreaterThan(BigDecimal value) {
             addCriterion("GNPOld >", value, "gnpold");
             return (Criteria) this;
         }
 
-        public Criteria andGnpoldGreaterThanOrEqualTo(Float value) {
+        public Criteria andGnpoldGreaterThanOrEqualTo(BigDecimal value) {
             addCriterion("GNPOld >=", value, "gnpold");
             return (Criteria) this;
         }
 
-        public Criteria andGnpoldLessThan(Float value) {
+        public Criteria andGnpoldLessThan(BigDecimal value) {
             addCriterion("GNPOld <", value, "gnpold");
             return (Criteria) this;
         }
 
-        public Criteria andGnpoldLessThanOrEqualTo(Float value) {
+        public Criteria andGnpoldLessThanOrEqualTo(BigDecimal value) {
             addCriterion("GNPOld <=", value, "gnpold");
             return (Criteria) this;
         }
 
-        public Criteria andGnpoldIn(List<Float> values) {
+        public Criteria andGnpoldIn(List<BigDecimal> values) {
             addCriterion("GNPOld in", values, "gnpold");
             return (Criteria) this;
         }
 
-        public Criteria andGnpoldNotIn(List<Float> values) {
+        public Criteria andGnpoldNotIn(List<BigDecimal> values) {
             addCriterion("GNPOld not in", values, "gnpold");
             return (Criteria) this;
         }
 
-        public Criteria andGnpoldBetween(Float value1, Float value2) {
+        public Criteria andGnpoldBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("GNPOld between", value1, value2, "gnpold");
             return (Criteria) this;
         }
 
-        public Criteria andGnpoldNotBetween(Float value1, Float value2) {
+        public Criteria andGnpoldNotBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("GNPOld not between", value1, value2, "gnpold");
             return (Criteria) this;
         }

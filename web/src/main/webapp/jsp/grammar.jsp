@@ -32,22 +32,22 @@
  <!-- jsp 的java代码片段 
  -->
  <%
- 	// 通过 这种 形式, 可以写任意的java代码片段
+ // 通过 这种 形式, 可以写任意的java代码片段
  int p = 99;
  int q = 100;
  %>
 
 
  <%
- 	for (int i = 0; i < 9; i++) {
+ for (int i = 0; i < 9; i++) {
  %>
  <font color="red" size="8"><%=i%></font>
  <%
- 	}
+ }
  %>
  <hr />
  <%
- 	request.setAttribute("name", "二蛋蛋");
+ request.setAttribute("name", "二蛋蛋");
  String value = (String) request.getAttribute("name");
  out.print(value);
  %>

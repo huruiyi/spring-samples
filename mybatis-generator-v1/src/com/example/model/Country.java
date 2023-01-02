@@ -1,5 +1,7 @@
 package com.example.model;
 
+import java.math.BigDecimal;
+
 public class Country {
     private String code;
 
@@ -9,17 +11,17 @@ public class Country {
 
     private String region;
 
-    private Float surfacearea;
+    private BigDecimal surfacearea;
 
     private Short indepyear;
 
     private Integer population;
 
-    private Float lifeexpectancy;
+    private BigDecimal lifeexpectancy;
 
-    private Float gnp;
+    private BigDecimal gnp;
 
-    private Float gnpold;
+    private BigDecimal gnpold;
 
     private String localname;
 
@@ -63,11 +65,11 @@ public class Country {
         this.region = region == null ? null : region.trim();
     }
 
-    public Float getSurfacearea() {
+    public BigDecimal getSurfacearea() {
         return surfacearea;
     }
 
-    public void setSurfacearea(Float surfacearea) {
+    public void setSurfacearea(BigDecimal surfacearea) {
         this.surfacearea = surfacearea;
     }
 
@@ -87,27 +89,27 @@ public class Country {
         this.population = population;
     }
 
-    public Float getLifeexpectancy() {
+    public BigDecimal getLifeexpectancy() {
         return lifeexpectancy;
     }
 
-    public void setLifeexpectancy(Float lifeexpectancy) {
+    public void setLifeexpectancy(BigDecimal lifeexpectancy) {
         this.lifeexpectancy = lifeexpectancy;
     }
 
-    public Float getGnp() {
+    public BigDecimal getGnp() {
         return gnp;
     }
 
-    public void setGnp(Float gnp) {
+    public void setGnp(BigDecimal gnp) {
         this.gnp = gnp;
     }
 
-    public Float getGnpold() {
+    public BigDecimal getGnpold() {
         return gnpold;
     }
 
-    public void setGnpold(Float gnpold) {
+    public void setGnpold(BigDecimal gnpold) {
         this.gnpold = gnpold;
     }
 
@@ -150,4 +152,15 @@ public class Country {
     public void setCode2(String code2) {
         this.code2 = code2 == null ? null : code2.trim();
     }
+
+	@Override
+	public String toString() {
+		return "Country [code=" + code + ", name=" + name + ", continent=" + continent + ", region=" + region
+				+ ", surfacearea=" + surfacearea + ", indepyear=" + indepyear + ", population=" + population
+				+ ", lifeexpectancy=" + lifeexpectancy + ", gnp=" + gnp + ", gnpold=" + gnpold + ", localname="
+				+ localname + ", governmentform=" + governmentform + ", headofstate=" + headofstate + ", capital="
+				+ capital + ", code2=" + code2 + "]";
+	}
+    
+    
 }

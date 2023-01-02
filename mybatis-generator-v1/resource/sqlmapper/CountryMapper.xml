@@ -6,12 +6,12 @@
     <result column="Name" jdbcType="CHAR" property="name" />
     <result column="Continent" jdbcType="CHAR" property="continent" />
     <result column="Region" jdbcType="CHAR" property="region" />
-    <result column="SurfaceArea" jdbcType="REAL" property="surfacearea" />
+    <result column="SurfaceArea" jdbcType="DECIMAL" property="surfacearea" />
     <result column="IndepYear" jdbcType="SMALLINT" property="indepyear" />
     <result column="Population" jdbcType="INTEGER" property="population" />
-    <result column="LifeExpectancy" jdbcType="REAL" property="lifeexpectancy" />
-    <result column="GNP" jdbcType="REAL" property="gnp" />
-    <result column="GNPOld" jdbcType="REAL" property="gnpold" />
+    <result column="LifeExpectancy" jdbcType="DECIMAL" property="lifeexpectancy" />
+    <result column="GNP" jdbcType="DECIMAL" property="gnp" />
+    <result column="GNPOld" jdbcType="DECIMAL" property="gnpold" />
     <result column="LocalName" jdbcType="CHAR" property="localname" />
     <result column="GovernmentForm" jdbcType="CHAR" property="governmentform" />
     <result column="HeadOfState" jdbcType="CHAR" property="headofstate" />
@@ -118,9 +118,9 @@
       HeadOfState, Capital, Code2
       )
     values (#{code,jdbcType=CHAR}, #{name,jdbcType=CHAR}, #{continent,jdbcType=CHAR}, 
-      #{region,jdbcType=CHAR}, #{surfacearea,jdbcType=REAL}, #{indepyear,jdbcType=SMALLINT}, 
-      #{population,jdbcType=INTEGER}, #{lifeexpectancy,jdbcType=REAL}, #{gnp,jdbcType=REAL}, 
-      #{gnpold,jdbcType=REAL}, #{localname,jdbcType=CHAR}, #{governmentform,jdbcType=CHAR}, 
+      #{region,jdbcType=CHAR}, #{surfacearea,jdbcType=DECIMAL}, #{indepyear,jdbcType=SMALLINT}, 
+      #{population,jdbcType=INTEGER}, #{lifeexpectancy,jdbcType=DECIMAL}, #{gnp,jdbcType=DECIMAL}, 
+      #{gnpold,jdbcType=DECIMAL}, #{localname,jdbcType=CHAR}, #{governmentform,jdbcType=CHAR}, 
       #{headofstate,jdbcType=CHAR}, #{capital,jdbcType=INTEGER}, #{code2,jdbcType=CHAR}
       )
   </insert>
@@ -187,7 +187,7 @@
         #{region,jdbcType=CHAR},
       </if>
       <if test="surfacearea != null">
-        #{surfacearea,jdbcType=REAL},
+        #{surfacearea,jdbcType=DECIMAL},
       </if>
       <if test="indepyear != null">
         #{indepyear,jdbcType=SMALLINT},
@@ -196,13 +196,13 @@
         #{population,jdbcType=INTEGER},
       </if>
       <if test="lifeexpectancy != null">
-        #{lifeexpectancy,jdbcType=REAL},
+        #{lifeexpectancy,jdbcType=DECIMAL},
       </if>
       <if test="gnp != null">
-        #{gnp,jdbcType=REAL},
+        #{gnp,jdbcType=DECIMAL},
       </if>
       <if test="gnpold != null">
-        #{gnpold,jdbcType=REAL},
+        #{gnpold,jdbcType=DECIMAL},
       </if>
       <if test="localname != null">
         #{localname,jdbcType=CHAR},
@@ -243,7 +243,7 @@
         Region = #{record.region,jdbcType=CHAR},
       </if>
       <if test="record.surfacearea != null">
-        SurfaceArea = #{record.surfacearea,jdbcType=REAL},
+        SurfaceArea = #{record.surfacearea,jdbcType=DECIMAL},
       </if>
       <if test="record.indepyear != null">
         IndepYear = #{record.indepyear,jdbcType=SMALLINT},
@@ -252,13 +252,13 @@
         Population = #{record.population,jdbcType=INTEGER},
       </if>
       <if test="record.lifeexpectancy != null">
-        LifeExpectancy = #{record.lifeexpectancy,jdbcType=REAL},
+        LifeExpectancy = #{record.lifeexpectancy,jdbcType=DECIMAL},
       </if>
       <if test="record.gnp != null">
-        GNP = #{record.gnp,jdbcType=REAL},
+        GNP = #{record.gnp,jdbcType=DECIMAL},
       </if>
       <if test="record.gnpold != null">
-        GNPOld = #{record.gnpold,jdbcType=REAL},
+        GNPOld = #{record.gnpold,jdbcType=DECIMAL},
       </if>
       <if test="record.localname != null">
         LocalName = #{record.localname,jdbcType=CHAR},
@@ -286,12 +286,12 @@
       Name = #{record.name,jdbcType=CHAR},
       Continent = #{record.continent,jdbcType=CHAR},
       Region = #{record.region,jdbcType=CHAR},
-      SurfaceArea = #{record.surfacearea,jdbcType=REAL},
+      SurfaceArea = #{record.surfacearea,jdbcType=DECIMAL},
       IndepYear = #{record.indepyear,jdbcType=SMALLINT},
       Population = #{record.population,jdbcType=INTEGER},
-      LifeExpectancy = #{record.lifeexpectancy,jdbcType=REAL},
-      GNP = #{record.gnp,jdbcType=REAL},
-      GNPOld = #{record.gnpold,jdbcType=REAL},
+      LifeExpectancy = #{record.lifeexpectancy,jdbcType=DECIMAL},
+      GNP = #{record.gnp,jdbcType=DECIMAL},
+      GNPOld = #{record.gnpold,jdbcType=DECIMAL},
       LocalName = #{record.localname,jdbcType=CHAR},
       GovernmentForm = #{record.governmentform,jdbcType=CHAR},
       HeadOfState = #{record.headofstate,jdbcType=CHAR},
@@ -314,7 +314,7 @@
         Region = #{region,jdbcType=CHAR},
       </if>
       <if test="surfacearea != null">
-        SurfaceArea = #{surfacearea,jdbcType=REAL},
+        SurfaceArea = #{surfacearea,jdbcType=DECIMAL},
       </if>
       <if test="indepyear != null">
         IndepYear = #{indepyear,jdbcType=SMALLINT},
@@ -323,13 +323,13 @@
         Population = #{population,jdbcType=INTEGER},
       </if>
       <if test="lifeexpectancy != null">
-        LifeExpectancy = #{lifeexpectancy,jdbcType=REAL},
+        LifeExpectancy = #{lifeexpectancy,jdbcType=DECIMAL},
       </if>
       <if test="gnp != null">
-        GNP = #{gnp,jdbcType=REAL},
+        GNP = #{gnp,jdbcType=DECIMAL},
       </if>
       <if test="gnpold != null">
-        GNPOld = #{gnpold,jdbcType=REAL},
+        GNPOld = #{gnpold,jdbcType=DECIMAL},
       </if>
       <if test="localname != null">
         LocalName = #{localname,jdbcType=CHAR},
@@ -354,12 +354,12 @@
     set Name = #{name,jdbcType=CHAR},
       Continent = #{continent,jdbcType=CHAR},
       Region = #{region,jdbcType=CHAR},
-      SurfaceArea = #{surfacearea,jdbcType=REAL},
+      SurfaceArea = #{surfacearea,jdbcType=DECIMAL},
       IndepYear = #{indepyear,jdbcType=SMALLINT},
       Population = #{population,jdbcType=INTEGER},
-      LifeExpectancy = #{lifeexpectancy,jdbcType=REAL},
-      GNP = #{gnp,jdbcType=REAL},
-      GNPOld = #{gnpold,jdbcType=REAL},
+      LifeExpectancy = #{lifeexpectancy,jdbcType=DECIMAL},
+      GNP = #{gnp,jdbcType=DECIMAL},
+      GNPOld = #{gnpold,jdbcType=DECIMAL},
       LocalName = #{localname,jdbcType=CHAR},
       GovernmentForm = #{governmentform,jdbcType=CHAR},
       HeadOfState = #{headofstate,jdbcType=CHAR},
