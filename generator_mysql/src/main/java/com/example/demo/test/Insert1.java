@@ -3,9 +3,9 @@ package com.example.demo.test;
 import java.io.IOException;
 import java.util.Date;
 
+import com.example.demo.mapping.UserInfo;
 import org.apache.ibatis.session.SqlSession;
 
-import com.example.demo.mapping.UserInfo;
 import com.example.demo.tools.DBTools;
 
 public class Insert1 {

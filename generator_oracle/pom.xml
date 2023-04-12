@@ -27,11 +27,17 @@
 			<artifactId>mybatis-generator-core</artifactId>
 			<version>1.4.0</version>
 		</dependency>
-		<!-- mvn install:install-file -Dfile="C:\app\oracle\Installer\jdbc\lib\ojdbc8.jar" -DgroupId=com.oracle -DartifactId=ojdbc8 -Dversion=0.0.193.1 -Dpackaging=jar -->
+		<!-- mvn install:install-file -Dfile="C:\App\Dev\Oracle\Installer\jdbc\lib\ojdbc8.jar" -DgroupId=com.oracle -DartifactId=ojdbc8 -Dversion=0.0.193.1 -Dpackaging=jar -->
+		<!--
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc8</artifactId>
 			<version>0.0.193.1</version>
+		</dependency>-->
+		 <dependency>
+		    <groupId>com.oracle.database.jdbc</groupId>
+		    <artifactId>ojdbc8</artifactId>
+		    <version>23.2.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>

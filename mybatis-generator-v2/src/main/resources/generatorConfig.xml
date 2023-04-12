@@ -6,6 +6,7 @@
  <!-- 数据库驱动 (修改为自己的版本) -->
  <context id="ORACLETables" targetRuntime="MyBatis3">
 
+  <!-- 防止重复生成mapper内容 -->
   <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin" />
 
   <commentGenerator>
