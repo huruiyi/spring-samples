@@ -152,15 +152,4 @@ public class Country {
     public void setCode2(String code2) {
         this.code2 = code2 == null ? null : code2.trim();
     }
-
-	@Override
-	public String toString() {
-		return "Country [code=" + code + ", name=" + name + ", continent=" + continent + ", region=" + region
-				+ ", surfacearea=" + surfacearea + ", indepyear=" + indepyear + ", population=" + population
-				+ ", lifeexpectancy=" + lifeexpectancy + ", gnp=" + gnp + ", gnpold=" + gnpold + ", localname="
-				+ localname + ", governmentform=" + governmentform + ", headofstate=" + headofstate + ", capital="
-				+ capital + ", code2=" + code2 + "]";
-	}
-    
-    
 }

@@ -12,20 +12,16 @@ import com.example.model.Country;
 
 public class MyBatisDemo {
 
-	public static void main(String[] args) {
-		try {
-			String resource = "mybatis-config.xml";
-			InputStream inputStream = Resources.getResourceAsStream(resource);
-			SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-			inputStream.close();
+	public static void main(String[] args) throws Exception {
+		String resource = "mybatis-config.xml";
+		InputStream inputStream = Resources.getResourceAsStream(resource);
+		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+		inputStream.close();
 
-			SqlSession sqlSession = sqlSessionFactory.openSession();
-			CountryMapper mapper = sqlSession.getMapper(CountryMapper.class);
-			Country country = mapper.selectByPrimaryKey("ABW");
-			System.out.println(country.toString());
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		CountryMapper mapper = sqlSession.getMapper(CountryMapper.class);
+		Country country = mapper.selectByPrimaryKey("ABW");
+		System.out.println(country.toString());
 
 	}
 }
