@@ -16,5 +16,18 @@
   <input type="file" name="uploadfile">
   <input type="submit">
  </form>
+ 
+ 
+ 
+<fieldset>
+    <legend>多文件上传</legend>
+    <form action="uploads" method="post" enctype="multipart/form-data">
+        <input type="file" name="file"> <br/>
+        <input type="file" name="file"> <br/>
+        <input type="file" name="file"> <br/>
+        <input type="file" name="file"> <br/>
+        <input type="submit" value="submit">
+    </form>
+</fieldset>
 </body>
 </html>
