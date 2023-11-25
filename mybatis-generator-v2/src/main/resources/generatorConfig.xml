@@ -44,5 +44,6 @@
   <table tableName="city" domainObjectName="City">
    <!-- <generatedKey column="UUID" sqlStatement="oracle" identity="true" /> -->
   </table>
+  <table tableName="country"/>
  </context>
 </generatorConfiguration>

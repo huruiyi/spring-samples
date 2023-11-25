@@ -18,47 +18,36 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author 1034683568@qq.com
- * @project_name ssm-maven
- * @date 2017-3-1
- */
 @Controller
 @RequestMapping("/book")
 public class BookController {
     @Resource
     private BookService bookService;
-    private static final Logger log = Logger.getLogger(BookController.class);// 日志文件
+    private static final Logger log = Logger.getLogger(BookController.class);
 
     @RequestMapping("/listAll")
-    public String listAll(
-            @RequestParam(value = "page", required = false) String page,
-            @RequestParam(value = "rows", required = false) String rows,
-            @RequestParam(value = "success", required = false) String success,
-            Book book, HttpServletResponse response) throws Exception {
-        Map<String, Object> map = new HashMap<String, Object>();
+    public String listAll(@RequestParam(value = "page", required = false) String page,
+                          @RequestParam(value = "rows", required = false) String rows,
+                          @RequestParam(value = "success", required = false) String success, Book book, HttpServletResponse response)
+            throws Exception {
+        Map<String, Object> map = new HashMap<>();
         if (page != null && rows != null) {
-            PageBean pageBean = new PageBean(Integer.parseInt(page),
-                    Integer.parseInt(rows));
+            PageBean pageBean = new PageBean(Integer.parseInt(page), Integer.parseInt(rows));
             map.put("start", pageBean.getStart());
             map.put("size", pageBean.getPageSize());
         }
         List<Book> bookList = null;
-        Long total = 0L;
-        if (book.getAuthor() != null &&
-                !"".equals(book.getAuthor())) {
+        if (book.getAuthor() != null && !"".equals(book.getAuthor())) {
             map.put("author", StringUtil.formatLike(book.getAuthor()));
         }
-        if (book.getTitle() != null &&
-                !"".equals(book.getTitle())) {
+        if (book.getTitle() != null && !"".equals(book.getTitle())) {
             map.put("title", StringUtil.formatLike(book.getTitle()));
         }
-        if (book.getIsbn() != null &&
-                !"".equals(book.getIsbn())) {
+        if (book.getIsbn() != null && !"".equals(book.getIsbn())) {
             map.put("isbn", book.getIsbn() + "");
         }
         bookList = bookService.findBooks(map);
-        total = bookService.getTotalBooks(map);
+        Long total = bookService.getTotalBooks(map);
         JSONObject result = new JSONObject();
         JSONArray jsonArray = JSONArray.fromObject(bookList);
         result.put("rows", jsonArray);

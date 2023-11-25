@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Handler配置 -->
+    <bean id="itemsController1" name="/queryItems_test.action" class="com.example.demo.controller.ItemsController1"/>
+    <bean id="itemsController2" class="com.example.demo.controller.ItemsController2"/>
+
+    <!-- 注解版Handler配置 -->
+    <!-- <bean class="com.example.demo.controller.ItemsController3" /> -->
+
+    <!-- 注解版扫描配置,可以取代注解版Handler的配置 -->
+    <context:component-scan base-package="com.example.demo.controller"></context:component-scan>
+
+    <!-- 映射器配置 -->
+    <!-- 01 -->
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+
+    <!-- 02 -->
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/queryItems1.action">itemsController1</prop>
+                <prop key="/queryItems2.action">itemsController1</prop>
+                <prop key="/queryItems3.action">itemsController2</prop>
+            </props>
+        </property>
+    </bean>
+
+
+    <!-- 适配器配置 -->
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+    <bean class="org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter"/>
+
+
+    <!-- 03:映射器配置-注解版 -->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
+
+    <!-- 03:适配器配置-注解版 -->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/>
+
+    <!-- mvc注解驱动,可以代替
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter" /> -->
+    <!-- <mvc:annotation-driven></mvc:annotation-driven> -->
+
+    <!-- 视图解析器 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+</beans>
