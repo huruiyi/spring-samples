@@ -15,7 +15,7 @@
     <!-- <bean class="com.example.demo.controller.ItemsController3" /> -->
 
     <!-- 注解版扫描配置,可以取代注解版Handler的配置 -->
-    <context:component-scan base-package="com.example.demo.controller"></context:component-scan>
+    <context:component-scan base-package="com.example.demo.controller"/>
 
     <!-- 映射器配置 -->
     <!-- 01 -->
