@@ -13,8 +13,12 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 
- * <auth-constraint> <role-name>member</role-name>
- * <role-name>manager</role-name> </auth-constraint> 也可以指定多个角色
+ * <auth-constraint> 
+ *	 <role-name>member</role-name>
+ * 	 <role-name>manager</role-name> 
+ * </auth-constraint>
+ * 
+ *  也可以指定多个角色
  * 
  * <role rolename="tomcat"/> <role rolename="admin"/> <role rolename="role1"/>
  * <role rolename="member"/>
