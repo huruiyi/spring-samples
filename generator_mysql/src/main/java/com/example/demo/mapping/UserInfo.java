@@ -3,53 +3,66 @@ package com.example.demo.mapping;
 import java.util.Date;
 
 public class UserInfo {
-    private Integer id;
 
-    private String username;
+  private Integer id;
 
-    private String password;
+  private String username;
 
-    private Integer age;
+  private String password;
 
-    private Date insertdate;
+  private Integer age;
 
-    public Integer getId() {
-        return id;
-    }
+  private Date insertdate;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+  public Integer getId() {
+    return id;
+  }
 
-    public String getUsername() {
-        return username;
-    }
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+  public String getUsername() {
+    return username;
+  }
 
-    public String getPassword() {
-        return password;
-    }
+  public void setUsername(String username) {
+    this.username = username;
+  }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+  public String getPassword() {
+    return password;
+  }
 
-    public Integer getAge() {
-        return age;
-    }
+  public void setPassword(String password) {
+    this.password = password;
+  }
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
+  public Integer getAge() {
+    return age;
+  }
 
-    public Date getInsertdate() {
-        return insertdate;
-    }
+  public void setAge(Integer age) {
+    this.age = age;
+  }
 
-    public void setInsertdate(Date insertdate) {
-        this.insertdate = insertdate;
-    }
+  public Date getInsertdate() {
+    return insertdate;
+  }
+
+  public void setInsertdate(Date insertdate) {
+    this.insertdate = insertdate;
+  }
+
+
+  @Override
+  public String toString() {
+    return "UserInfo{" +
+        "id=" + id +
+        ", username='" + username + '\'' +
+        ", password='" + password + '\'' +
+        ", age=" + age +
+        ", insertdate=" + insertdate +
+        '}';
+  }
 }

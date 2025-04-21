@@ -12,25 +12,27 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class App {
-    public static void main(String[] args) throws IOException {
-        UserInfo userinfo = new UserInfo();
-        userinfo.setUsername("中国");
-        userinfo.setPassword("中国人");
-        userinfo.setAge(100);
-        userinfo.setInsertdate(new Date());
 
-        String configFile = "mybatis-config.xml";
-        InputStream configStream = Resources.getResourceAsStream(configFile);
-        SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
-        SqlSessionFactory factory = builder.build(configStream);
-        SqlSession session = factory.openSession();
+  public static void main(String[] args) throws IOException {
+    UserInfo userinfo = new UserInfo();
+    userinfo.setUsername("中国");
+    userinfo.setPassword("中国人");
+    userinfo.setAge(100);
+    userinfo.setInsertdate(new Date());
 
-        session.insert("insert", userinfo);
+    String configFile = "mybatis-config.xml";
+    InputStream configStream = Resources.getResourceAsStream(configFile);
+    SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
+    SqlSessionFactory factory = builder.build(configStream);
+    SqlSession session = factory.openSession();
 
-        UserInfoMapper mapper = session.getMapper(UserInfoMapper.class);
-        mapper.insert(userinfo);
+    session.insert("insert", userinfo);
 
-        session.commit();
-        session.close();
-    }
+    UserInfoMapper mapper = session.getMapper(UserInfoMapper.class);
+    mapper.insert(userinfo);
+
+    session.commit();
+    session.close();
+  }
+
 }

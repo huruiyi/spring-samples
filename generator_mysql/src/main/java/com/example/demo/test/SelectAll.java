@@ -9,14 +9,14 @@ import org.apache.ibatis.session.SqlSession;
 import com.example.demo.tools.DBTools;
 
 public class SelectAll {
-	public static void main(String[] args) throws IOException {
-		SqlSession session = DBTools.getSqlSession();
-		List<UserInfo> listUserinfo = session.selectList("selectAll");
-		for (int i = 0; i < listUserinfo.size(); i++) {
-			UserInfo userinfo = listUserinfo.get(i);
-			System.out.println(userinfo);
-		}
-		session.commit();
-		session.close();
-	}
+
+  public static void main(String[] args) throws IOException {
+    SqlSession session = DBTools.getSqlSession();
+    List<UserInfo> listUserinfo = session.selectList("selectAll");
+    for (UserInfo userinfo : listUserinfo) {
+      System.out.println(userinfo);
+    }
+    session.commit();
+    session.close();
+  }
 }
