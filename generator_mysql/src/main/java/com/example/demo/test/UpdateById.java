@@ -1,11 +1,10 @@
 package com.example.demo.test;
 
-import java.io.IOException;
-
 import com.example.demo.mapping.UserInfo;
+import com.example.demo.tools.DBTools;
 import org.apache.ibatis.session.SqlSession;
 
-import com.example.demo.tools.DBTools;
+import java.io.IOException;
 
 public class UpdateById {
 

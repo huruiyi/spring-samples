@@ -1,27 +1,26 @@
 package com.mybatis;
 
-import java.io.InputStream;
-
+import com.example.mapper.CountryMapper;
+import com.example.model.Country;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import com.example.mapper.CountryMapper;
-import com.example.model.Country;
+import java.io.InputStream;
 
 public class MyBatisDemo {
 
-	public static void main(String[] args) throws Exception {
-		String resource = "mybatis-config.xml";
-		InputStream inputStream = Resources.getResourceAsStream(resource);
-		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-		inputStream.close();
+  public static void main(String[] args) throws Exception {
+    String resource = "mybatis-config.xml";
+    InputStream inputStream = Resources.getResourceAsStream(resource);
+    SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+    inputStream.close();
 
-		SqlSession sqlSession = sqlSessionFactory.openSession();
-		CountryMapper mapper = sqlSession.getMapper(CountryMapper.class);
-		Country country = mapper.selectByPrimaryKey("ABW");
-		System.out.println(country.toString());
+    SqlSession sqlSession = sqlSessionFactory.openSession();
+    CountryMapper mapper = sqlSession.getMapper(CountryMapper.class);
+    Country country = mapper.selectByPrimaryKey("ABW");
+    System.out.println(country.toString());
 
-	}
+  }
 }

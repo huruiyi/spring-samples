@@ -12,19 +12,19 @@ public interface CountryMapper {
 
     int deleteByPrimaryKey(String code);
 
-    int insert(Country record);
+    int insert(Country row);
 
-    int insertSelective(Country record);
+    int insertSelective(Country row);
 
     List<Country> selectByExample(CountryExample example);
 
     Country selectByPrimaryKey(String code);
 
-    int updateByExampleSelective(@Param("record") Country record, @Param("example") CountryExample example);
+    int updateByExampleSelective(@Param("row") Country row, @Param("example") CountryExample example);
 
-    int updateByExample(@Param("record") Country record, @Param("example") CountryExample example);
+    int updateByExample(@Param("row") Country row, @Param("example") CountryExample example);
 
-    int updateByPrimaryKeySelective(Country record);
+    int updateByPrimaryKeySelective(Country row);
 
-    int updateByPrimaryKey(Country record);
+    int updateByPrimaryKey(Country row);
 }
